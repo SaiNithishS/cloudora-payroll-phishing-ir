@@ -19,7 +19,7 @@ An attacker sent a "confirm your payroll details" phishing email to 40 staff, im
 
 | Folder | Contents |
 |---|---|
-| `report/` | The full report — **read the PDF first** |
+| `report/` | The full report - **read the PDF first** |
 | `evidence/` | The 6 raw phishing/legitimate emails, message-trace and sign-in log exports, and an IOC list |
 | `detections/` | The KQL queries used in the investigation, the header-analysis checklist, and 1 new detection rule |
 
