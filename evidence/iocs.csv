@@ -1,0 +1,12 @@
+type,indicator,context
+Sending IP,198.18.44.10,Variant A relay (wave 1); spoofs payroll@cloudora.io, fails all authentication
+Sending IP,198.18.44.23,Variant A relay (wave 2); same spoofing pattern
+Sending IP,198.18.51.7,Variant B relay; sends from the lookalike domain and passes authentication for it
+Login/harvest IP,198.18.7.200,Amsterdam - used to sign in to both compromised accounts with harvested credentials
+Lookalike domain,cloudora-hr-portal.example,Attacker infrastructure; hosts the harvesting page and Variant B's Reply-To/From
+Malicious URL,hxxps://cloudora-hr-portal[.]example/payroll/login,Credential-harvesting page (Variant A)
+Malicious URL,hxxps://login[.]cloudora-hr-portal[.]example/verify,Credential-harvesting page (Variant B)
+Spoofed sender,payroll@cloudora.io,Forged address used in Variant A
+Device/User-Agent,"Windows 11, Chrome",Attacker session fingerprint, never seen on either victim account before
+Compromised account,freya.lynn@cloudora.io,Confirmed compromise
+Compromised account,ryan.boyd@cloudora.io,Confirmed compromise

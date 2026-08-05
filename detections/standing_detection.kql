@@ -1,0 +1,24 @@
+// ============================================================================
+//  CLOUDORA CLD-IR-0002  |  Standing detection rule derived from this incident
+//  Author: Sai Nithish Sampath
+//  Tables: CloudoraMsgTrace_CL, CloudoraSignIn_CL (Microsoft Sentinel / ADX syntax)
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// New-country sign-in shortly after a phishing-link click by the same account
+// (Task 4 — the detection improvement that would have caught this campaign
+// roughly 4 hours before it was actually reported)
+// ----------------------------------------------------------------------------
+let RecentClickers = CloudoraMsgTrace_CL
+    | where EventType == "Click"
+    | project RecipientAddress, ClickTime = TimeGenerated;
+CloudoraSignIn_CL
+| where ResultType == "0"
+| join kind=inner RecentClickers on $left.UserPrincipalName == $right.RecipientAddress
+| where TimeGenerated between (ClickTime .. ClickTime + 6h)
+| where Country != "United Kingdom"
+
+// Threshold note: a 6-hour window is wide enough to catch same-day credential
+// reuse but tight enough to stay meaningfully correlated to the click rather
+// than matching unrelated later activity. In this incident both attacker
+// logins followed their click by under 4 hours.
