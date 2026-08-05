@@ -1,6 +1,6 @@
-# Cloudora Payroll Phishing Campaign — Incident Response Report
+# Cloudora Payroll Phishing Campaign - Incident Response Report
 
-SOC/DFIR portfolio project by **Sai Nithish Sampath** — [GitHub](https://github.com/SaiNithishS) · [Portfolio](https://sainithishsampath.vercel.app)
+SOC/DFIR portfolio project by **Sai Nithish Sampath** - [GitHub](https://github.com/SaiNithishS) · [Portfolio](https://sainithishsampath.vercel.app)
 
 ## What this is
 
@@ -10,10 +10,10 @@ Cloudora is a fictional company used for training. The emails and logs came from
 
 ## The incident
 
-An attacker sent a "confirm your payroll details" phishing email to 40 staff, impersonating Cloudora HR, using two variants: one that spoofed the real Cloudora address and failed every authentication check, and one sent from the attacker's own lookalike domain that legitimately *passed* SPF/DKIM/DMARC — for the fake domain, not for Cloudora. Six people clicked, two entered their passwords, and the attacker used both stolen passwords the same day from an address in Amsterdam.
+An attacker sent a "confirm your payroll details" phishing email to 40 staff, impersonating Cloudora HR, using two variants: one that spoofed the real Cloudora address and failed every authentication check, and one sent from the attacker's own lookalike domain that legitimately *passed* SPF/DKIM/DMARC - for the fake domain, not for Cloudora. Six people clicked, two entered their passwords, and the attacker used both stolen passwords the same day from an address in Amsterdam.
 
 - **40** staff targeted, **2** accounts compromised
-- One phishing variant passed every authentication check — proof that "passed" doesn't mean "safe"
+- One phishing variant passed every authentication check - proof that "passed" doesn't mean "safe"
 - A reported marketing newsletter was investigated and correctly cleared as legitimate
 - Both accounts contained and attacker infrastructure blocked the same day
 
