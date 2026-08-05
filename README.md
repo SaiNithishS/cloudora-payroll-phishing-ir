@@ -4,7 +4,7 @@
 
 A full incident response investigation into a simulated payroll-themed phishing campaign, written up as a professional SOC report. I triaged a reported phishing email by hand (headers, authentication, infrastructure), then used Exchange Online message-trace and Microsoft Entra ID sign-in logs in KQL to scope the campaign and confirm who was compromised.
 
-Cloudora is a fictional company used for training. The emails and logs came from a training data set — the investigation, analysis, and report are my own work.
+Cloudora is a fictional company used for training. The emails and logs came from a training data set, the investigation, analysis, and report are my own work.
 
 ## The incident
 
