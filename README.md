@@ -1,7 +1,5 @@
 # Cloudora Payroll Phishing Campaign - Incident Response Report
 
-SOC/DFIR portfolio project by **Sai Nithish Sampath** - [GitHub](https://github.com/SaiNithishS) · [Portfolio](https://sainithishsampath.vercel.app)
-
 ## What this is
 
 A full incident response investigation into a simulated payroll-themed phishing campaign, written up as a professional SOC report. I triaged a reported phishing email by hand (headers, authentication, infrastructure), then used Exchange Online message-trace and Microsoft Entra ID sign-in logs in KQL to scope the campaign and confirm who was compromised.
@@ -28,7 +26,3 @@ An attacker sent a "confirm your payroll details" phishing email to 40 staff, im
 ## Skills demonstrated
 
 Email header and authentication analysis (SPF/DKIM/DMARC) · phishing infrastructure analysis · KQL log analysis · Exchange Online message trace · MITRE ATT&CK mapping · detection engineering · incident response reporting · user-facing security communications
-
-## Credit
-
-Scenario and source data: "Cloudora Payroll Phishing Campaign" training pack (MyFirstCyberJob). Investigation and report: my own work.
